@@ -1,0 +1,1 @@
+require 'encrypted-cookie-store/encrypted_cookie_store.rb'
