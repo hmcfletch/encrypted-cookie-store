@@ -1,3 +1,5 @@
+require 'encrypted-cookies'
+
 module EncryptedCookieStore
   # swap out the signed cookie jar for an encrypted cookie jar
   class EncryptedCookieStore < ActionDispatch::Session::CookieStore
