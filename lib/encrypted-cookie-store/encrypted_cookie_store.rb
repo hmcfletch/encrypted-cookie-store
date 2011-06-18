@@ -15,8 +15,17 @@ module EncryptedCookieStore
       end
     end
 
-    def set_cookie(request, options)
-      request.cookie_jar.encrypted[@key] = options
+    if Rails::VERSION::MAJOR == 3 && Rails::VERSION::MINOR == 0
+      puts "+++ 3.0"
+      def set_cookie(request, options)
+        request.cookie_jar.encrypted[@key] = options
+      end
+    elsif Rails::VERSION::MAJOR == 3 && Rails::VERSION::MINOR == 1
+      puts "+++ 3.1"
+      def set_cookie(env, session_id, cookie)
+        request = ActionDispatch::Request.new(env)
+        request.cookie_jar.encrypted[@key] = cookie
+      end
     end
   end
 end
