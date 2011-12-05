@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency('rails', '~> 3.0')
-  s.add_dependency('encrypted-cookies', '>= 0.3')
+  s.add_dependency('encrypted-cookies', '~> 0.3')
 end
