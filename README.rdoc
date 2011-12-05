@@ -1,5 +1,9 @@
 = Encrypted Cookie Store
 
+== Important Notice
+
++encrypted-cookies+ has breaking changes in v1.0. Session cookies written with v0.3.* will no be able to be read by v1.0. Fix your version of +encrypted-cookie-store+ to v0.3.2 if you don't want to make the switch. See +encrypted-cookies+ if you want more information about the change.
+
 == Description
 
 Encrypted cookie based session for Rails 3.
