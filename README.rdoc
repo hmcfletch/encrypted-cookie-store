@@ -18,7 +18,7 @@ Enabling an EncryptedCookieStore is easy. Just add the gem requirement to your +
 
     gem 'encrypted-cookie-store'
 
-Then update then session store you are using in +config/initializers/session_store.rb+:
+Then update the session store you are using in +config/initializers/session_store.rb+:
 
     AppName::Application.config.session_store :encrypted_cookie_store, :key => '_app_name_session'
 
